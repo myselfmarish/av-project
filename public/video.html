@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Video page</h1>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/video">Watch video</a>
+      <a href="/audio">Play audio</a>
+    </nav>
+
+    <div id="videoElement">
+        <video id="video" class="video-js vjs-captions vjs-theme-city vjs-control-bar" controls preload="auto">
+            <source src="/media/video.mp4" type="video/mp4">
+            <track src="/media/captions.vtt" kind="captions" srclang="en" label="English" default>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+
+
+  <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+  <script>
+      const videoPlayer = document.getElementById('video');
+
+      let alt = "Tutorial about how to create a simple program in Java",
+          title = "Every programming tutorial",
+          description = "Credentials go to: https://www.youtube.com/watch?v=MAlSjtxy5ak&ab_channel=Jombo",
+          ariaLabel = "Player controls";
+
+      videoPlayer.setAttribute('alt',alt);
+      videoPlayer.setAttribute('title',title);
+      videoPlayer.setAttribute('aria-describedby',description);
+      videoPlayer.setAttribute('aria-label',ariaLabel);
+
+
+      let player = videojs('video', {
+          playbackRates: [0.5, 1, 1.5, 2]
+      });
+
+  </script>
+</body>
+</html>
