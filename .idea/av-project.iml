@@ -10,5 +10,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="RoutingWithVue" />
     <orderEntry type="module" module-name="roku_front" />
+    <orderEntry type="library" name="plyr" level="application" />
+    <orderEntry type="library" name="video-js" level="application" />
+    <orderEntry type="library" name="video" level="application" />
+    <orderEntry type="library" name="@videojs/themes" level="application" />
   </component>
 </module>
